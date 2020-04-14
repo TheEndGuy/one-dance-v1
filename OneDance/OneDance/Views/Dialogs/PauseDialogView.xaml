@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="OneDance.Views.Dialogs.PauseDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="240" d:DesignWidth="470">
+    <Grid Background="White">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <!-- Painel superior -->
+        <materialDesign:PackIcon
+            Panel.ZIndex="1"
+            Width="35"
+            Height="35"
+            Margin="130,1,0,0"
+            Foreground="White"
+		    Kind="Pause" />
+        
+        <!-- Painel superior -->
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            VerticalAlignment="Top"
+            Height="40"
+            Width="470"
+            Background="#673AB7">
+            
+            <TextBlock
+                Height="30"
+                Width="155"
+                Grid.Row="0"
+                Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                Margin="170,1,0,0"
+                FontSize="23"
+                Foreground="White">
+                <Run Text="JOGO PARADO"/>
+            </TextBlock>
+
+        </StackPanel>
+
+        <!-- Texto informativo -->
+        <TextBlock
+            Opacity="0.6"
+            Grid.Row="1"
+            FontFamily="Open Sans"
+            FontSize="20">
+            <Run Text="                                    Atenção !"></Run>
+            <LineBreak/>
+            <Run Text="    Nenhum usuário foi reconhecido pelo Kinect."></Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="   Certifique-se que esteja na frente do sensor e"></Run>
+            <LineBreak/>
+            <Run Text="               tenha certa distância do mesmo.  "></Run>
+        </TextBlock>
+        
+        <!-- Painel Inferior -->
+        <StackPanel 
+            Orientation="Horizontal" 
+            Grid.Row="3"
+            Margin="0,3,0,3">
+
+            <!-- Finalizar -->
+            <Button
+                Margin="170,0,0,0"
+                Height="40"
+                FontSize="20"
+                Style="{DynamicResource MaterialDesignFlatButton}"
+                Command="{x:Static wpf:DialogHost.CloseDialogCommand}"
+                Content="FINALIZAR">
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

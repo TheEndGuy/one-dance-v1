@@ -1,0 +1,62 @@
+﻿<Window x:Class="OneDance.ViewModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:k="http://schemas.microsoft.com/kinect/2013"
+        xmlns:models="clr-namespace:OneDance.Models"
+        xmlns:rg="clr-namespace:SourceChord.ResponsiveGrid;assembly=ResponsiveGrid.Wpf"
+        mc:Ignorable="d"
+        Title="OneDance" 
+        WindowStartupLocation="CenterScreen"
+        MinHeight="720" MinWidth="1280"
+        MaxHeight="720" MaxWidth="1280"
+        WindowStyle="ToolWindow"
+        DataContext="{Binding MainMenu, Source={StaticResource Locator}}">
+
+    <Grid>
+        <!-- KinectSensor UI -->
+        <k:KinectSensorChooserUI
+            Panel.ZIndex="1"
+            Name="kinectSelectoUI"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" 
+            Height="28"/>
+        <!-- End KinectSensor UI -->
+
+        <TabControl
+            BorderBrush="Gainsboro"
+            VerticalAlignment="Top">
+            
+            <!-- Kinect Tab-->
+            <TabItem
+                Header="Kinect" 
+                x:Name="kinectTab" 
+                Style="{StaticResource tabStyle}">
+                <ContentPresenter Content="{Binding CurrentViewModel}" />
+            </TabItem>
+            <!-- End Kinect Tab -->
+
+            <!-- Console Tab-->
+            <TabItem 
+                Header="Console" 
+                Style="{StaticResource tabStyle}">
+                <TextBox
+                    Height="536"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    Text="{Binding Path=(models:ConsoleLog.Text)}"
+                    Foreground="White" 
+                    FontFamily="Consolas" 
+                    Padding="10"
+                    Background="Black">
+                </TextBox>
+            </TabItem>
+            <!-- End Console Tab -->
+            
+        </TabControl>
+    </Grid>
+
+</Window>
+

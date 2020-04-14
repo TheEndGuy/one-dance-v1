@@ -1,0 +1,237 @@
+﻿<Application x:Class="OneDance.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             StartupUri="Main.xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" 
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:OneDance.ViewModel"
+             xmlns:views="clr-namespace:OneDance.Views">
+    
+  <Application.Resources>
+     <ResourceDictionary>
+         
+      <!-- Storyboards animations -->
+      <Storyboard x:Key="EnterScreen">
+        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+      </Storyboard>
+         
+      <Storyboard x:Key="AnimationImage" RepeatBehavior="Forever">
+          <ObjectAnimationUsingKeyFrames BeginTime="0:0:0:0" Storyboard.TargetProperty="(Image.Source)" Storyboard.TargetName="imageBar">
+                    
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra02.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra03.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra04.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.17">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra05.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.24">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra06.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.29">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra07.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.36">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra08.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.43">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra09.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.50">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra10.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.57">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra11.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.66">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra12.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.71">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra13.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.78">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra14.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra15.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.92">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra16.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.99">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra17.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.06">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra18.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.13">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra19.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.20">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra20.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+              
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.27">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Barra/Barra01.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                </ObjectAnimationUsingKeyFrames>
+      </Storyboard>
+
+      <Storyboard x:Key="EnterAnimation" RepeatBehavior="1x">
+                <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="imageBar">
+                    <EasingThicknessKeyFrame KeyTime="0:0:4" Value="0,0,0,10"/>
+                </ThicknessAnimationUsingKeyFrames>
+      </Storyboard>
+      <!---->
+       
+      <!-- MVVM Light -->
+      <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+         
+      <DataTemplate DataType="{x:Type vm:StartMenuViewModel}">
+          <views:StartMenuView />
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type vm:TrainingViewModel}">
+          <views:TrainingView />
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type vm:GameViewModel}">
+          <views:GameView />
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type vm:PositionsSelectViewModel}">
+          <views:PositionsSelectView />
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type vm:BodyStructureViewModel}">
+          <views:BodyStructureView />
+      </DataTemplate>
+      <!---->
+        
+      <!-- Tab Style -->
+      <Style x:Key="tabStyle" TargetType="TabItem">
+          <Setter Property="Template">
+              <Setter.Value>
+                  <ControlTemplate TargetType="TabItem">
+                      <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                          <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="10,2" />
+                      </Border>
+                      <ControlTemplate.Triggers>
+                          <Trigger Property="IsSelected" Value="True">
+                              <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                          </Trigger>
+                          <Trigger Property="IsSelected" Value="False">
+                              <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                          </Trigger>
+                      </ControlTemplate.Triggers>
+                  </ControlTemplate>
+              </Setter.Value>
+          </Setter>
+      </Style>
+         
+      <Style x:Key="listTab" TargetType="TabItem">
+          <Setter Property="Template">
+              <Setter.Value>
+                  <ControlTemplate TargetType="TabItem">
+                      <Grid Name="Panel">
+                          <ContentPresenter x:Name="ContentSite"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            ContentSource="Header"
+                                            Margin="10,2"/>
+                      </Grid>
+                      <ControlTemplate.Triggers>
+                          <Trigger Property="IsSelected" Value="True">
+                              <Setter TargetName="Panel" Property="Background" Value="#AEEA00"/>
+                          </Trigger>
+                          <Trigger Property="IsSelected" Value="False">
+                              <Setter TargetName="Panel" Property="Background" Value="White" />
+                          </Trigger>
+                      </ControlTemplate.Triggers>
+                  </ControlTemplate>
+              </Setter.Value>
+          </Setter>
+      </Style>
+      <!---->
+        
+      <!-- MaterialSkin -->
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml">
+        </ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml">
+        </ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml">
+        </ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml">
+        </ResourceDictionary>
+       </ResourceDictionary.MergedDictionaries>
+      <!---->
+         
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

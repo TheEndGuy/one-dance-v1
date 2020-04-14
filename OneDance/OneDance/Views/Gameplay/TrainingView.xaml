@@ -1,0 +1,512 @@
+﻿<UserControl x:Class="OneDance.Views.TrainingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:OneDance.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+    
+    <!-- Enter Animation -->
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard Storyboard="{StaticResource AnimationImage}"/>
+            <BeginStoryboard Storyboard="{StaticResource EnterScreen}"/>
+            <BeginStoryboard Storyboard="{StaticResource EnterAnimation}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <!-- Resources -->
+    <UserControl.Resources>
+        <Storyboard Duration="{Binding}" x:Key="EnteringPosition" RepeatBehavior="1x">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="imagePictogram">
+                <EasingThicknessKeyFrame KeyTime="0:0:7" Value="0,0,510,20"/>
+            </ThicknessAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"  Storyboard.TargetName="imagePictogram">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.30" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.60" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.90" Value="150"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.05" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.20" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.35" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.50" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.65" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.85" Value="150"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.15" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.30" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.45" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.60" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.75" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.90" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.05" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.20" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.35" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.50" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.65" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.85" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:4" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.15" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.30" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.45" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.60" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.75" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:4.90" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.05" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.20" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.35" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.50" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.65" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:5.80" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.10" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.25" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.40" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.55" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.70" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.85" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:7" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.15" Value="150"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)"  Storyboard.TargetName="imagePictogram">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.30" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.45" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.60" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.90" Value="150"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.05" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.20" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.35" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.50" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.65" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:1.85" Value="150"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.15" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.30" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.45" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.60" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.75" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:2.90" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.05" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.20" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.35" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.50" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.65" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:3.85" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0:4" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.15" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.30" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.45" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.60" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.75" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:4.90" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.05" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.20" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.35" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.50" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.65" Value="148"/>
+
+                <EasingDoubleKeyFrame KeyTime="0:0:5.80" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.10" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.25" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.40" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.55" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.70" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.85" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:7" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.15" Value="150"/>
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard Duration="{Binding}" BeginTime="0:0:0:0" x:Key="FinishAnimation" RepeatBehavior="1x">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imagePictogram">
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.15" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.25" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.35" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.45" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.46" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.47" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.49" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.50" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.51" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.52" Value="0"/>
+
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="imagePictogram">
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.5" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.15" Value="160"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.25" Value="163"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.35" Value="164"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.45" Value="165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.45" Value="165"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="imagePictogram">
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.5" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.15" Value="160"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.25" Value="163"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.35" Value="164"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.45" Value="165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.45" Value="165"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+        <!-- Feedback -->
+        <Storyboard BeginTime="0:0:0:0" 
+                    x:Key="FeedbackAcerto"
+                    RepeatBehavior="1x">
+
+            <ObjectAnimationUsingKeyFrames BeginTime="0:0:0:0" 
+                                           Storyboard.TargetProperty="(Image.Source)" 
+                                           Storyboard.TargetName= "feedbackImage">
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0002.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.16">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0003.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.31">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0004.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.46">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0005.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.61">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0006.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.76">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0007.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.91">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0008.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.06">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0009.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.21">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0010.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.36">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0011.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.51">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Acerto/Acertou0012.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+            </ObjectAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" 
+                                           Storyboard.TargetName="feedbackImage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.46" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.51" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard BeginTime="0:0:0:0" 
+                    x:Key="FeedbackErro"
+                    RepeatBehavior="1x">
+
+            <ObjectAnimationUsingKeyFrames BeginTime="0:0:0:0" 
+                                           Storyboard.TargetProperty="(Image.Source)" 
+                                           Storyboard.TargetName= "feedbackImage">
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0002.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.16">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0003.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.31">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0004.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.46">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0005.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.61">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0006.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.76">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0007.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.91">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0008.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.06">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0009.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.21">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0010.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.36">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0011.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.51">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="/Images/Sequencia/Feedback/Erro/Errou0012.png" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+
+            </ObjectAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" 
+                                           Storyboard.TargetName="feedbackImage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.46" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.51" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid Height="660">
+        
+        <materialDesign:DialogHost Identifier="TrainingDialog"/>
+
+        <materialDesign:DialogHost Identifier="PauseDialog"/>
+
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            VerticalAlignment="Top"
+            Background="#673AB7">
+
+            <TextBlock
+                Style="{StaticResource MaterialDesignHeadlineTextBlock}"
+                Margin="560,3,0,3"
+                FontSize="20"
+                Foreground="White">
+                <Run Text="OneDance - Treinamento"/>
+            </TextBlock>
+        </StackPanel>
+
+        <!-- Ícone da avaliação -->
+        <materialDesign:PackIcon
+            Width="35"
+		    Height="35"
+		    Kind="PlaylistCheck"
+            Foreground="White"
+            Margin="40,40,0,0"
+            Panel.ZIndex="1"/>
+
+        <!-- Ícone da próxima pose -->
+        <materialDesign:PackIcon
+            Width="30"
+		    Height="30"
+		    Kind="SkipNext"
+            Foreground="White"
+            Margin="35,104,0,0"
+            Panel.ZIndex="1"/>
+
+        <!-- Ícone da pose atual -->
+        <materialDesign:PackIcon
+            Width="30"
+		    Height="30"
+		    Kind="RedoVariant"
+            Foreground="White"
+            Margin="35,400,0,0"
+            Panel.ZIndex="1"/>
+
+        <GroupBox
+            Height="615"
+            Width="230"
+            FontSize="20"
+            Margin="0,25,0,0" 
+            Header="              Avaliação"
+            HorizontalAlignment="Left">
+
+            <StackPanel>
+                <GroupBox
+                    Margin="0,10,0,0"
+                    VerticalAlignment="Top"
+                    FontSize="18" Header="         Próxima pose"
+                    Height="200"
+                    Width="200">
+
+                    <Image
+                        Source="{Binding Model.NextImage}"
+                        x:Name="nextPose"
+                        VerticalAlignment="Center"
+                        Height="140"
+                        Width="200"/>
+                </GroupBox>
+
+                <Button
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Command="{Binding ChangePosition}"
+                    CommandParameter="Next"
+                    Margin="0,10,0,0"
+                    Width="150"
+                    Height="30"
+                    ToolTip="Avançar para a próxima pose"
+                    Content="{Binding Model.ButtonText}"
+                    IsEnabled="{Binding Model.NextButtonEnabled}">
+                </Button>
+
+                <GroupBox 
+                    VerticalAlignment="Top"
+                    Margin="0,55,0,0"
+                    FontSize="18" 
+                    Header="           Pose atual"
+                    Height="200"
+                    Width="200">
+
+                    <Image 
+                        Source="{Binding Model.CurrentImage}"
+                        x:Name="remakePose" 
+                        VerticalAlignment="Center"
+                        Height="140"
+                        Width="200"/>
+                </GroupBox>
+
+                <Button
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Command="{Binding ChangePosition}"
+                    CommandParameter="Remake"
+                    Margin="0,10,0,0"
+                    Width="150"
+                    Height="30"
+                    ToolTip="Refazer pose atual"
+                    IsEnabled="{Binding Model.RemakeButtonEnabled}">
+                    Refazer
+                </Button>
+            </StackPanel>
+        </GroupBox>
+
+        <Border
+            Margin="0,30,5,0"
+            Height="615"
+            Width="1020" 
+            HorizontalAlignment="Right"
+            BorderBrush="LightGreen" 
+            BorderThickness="3">
+            <Canvas
+                Margin="0,0,0,0"
+                Height="610"
+                Width="1015"
+                HorizontalAlignment="Right"
+                Name="canvasKinect"
+                Background="{Binding Image}">
+            </Canvas>
+        </Border>
+        
+        <!-- Bar Image -->
+        <Image 
+            Source="/Images/Sequencia/Barra/Barra01.png" 
+            x:Name="imageBar" 
+            Height="210" 
+            Width="650" 
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom" 
+            Margin="0,0,-650,8" 
+            d:LayoutOverrides="HorizontalAlignment"/>
+
+        <!-- Feedback Image -->
+        <Image
+            Source="{Binding Model.FeedbackImage}"
+            x:Name="feedbackImage"
+            Height="350"
+            Width="300"
+            VerticalAlignment="Top"
+            Opacity="0"
+            HorizontalAlignment="Center"
+            Margin="225,35,0,0">
+        </Image>
+
+        <!-- Pictogram Image -->
+        <Image
+            Source="{Binding Model.CurrentImage}" 
+            x:Name="imagePictogram"
+            Height="200" 
+            Width="150" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right" 
+            Margin="0,0,-180,20">
+        </Image>
+
+    </Grid>
+</UserControl>
